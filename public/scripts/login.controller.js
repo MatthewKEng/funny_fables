@@ -7,13 +7,15 @@ function LoginController($http, $location) {
 
   ctrl.login = function() {
     console.log('logging in');
-    $http.post('/login', {
+    $http.post('/adminlog', {
       username: ctrl.username,
       password: ctrl.password
     }).then(function(){
-      $location.path('/home');
+      $location.path('/approval');
     }, function(error) {
-      console.log('error loggin in', error);
+      console.log('error login in', error);
+      console.log('ctrl.username', ctrl.username);
+      console.log('ctrl.password', ctrl.password);
     });
   };
 }

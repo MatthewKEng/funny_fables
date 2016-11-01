@@ -1,6 +1,7 @@
-angular.module('phinApp')
-       .config(function($routeProvider, $locationProvider) {
-         $routeProvider.when('/', {
+angular.module('phinApp').config(function($routeProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
+
+       $routeProvider.when('/', {
            templateUrl: 'views/home.html'
          }).when('/home', {
            templateUrl: 'views/home.html'
@@ -12,6 +13,8 @@ angular.module('phinApp')
            templateUrl: 'views/thanks.html'
          }).when('/adminlog', {
            templateUrl: 'views/adminlog.html'
+         }).when('/approval', {
+           templateUrl: 'views/approval.html'
          });
 
          // lets us use normal looking links
