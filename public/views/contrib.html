@@ -1,6 +1,67 @@
-<h1>Contribution page</h1>
-
-<p>Instructions here, blah blah blah...</p>
+<h1 class="marquee">Contribution page</h1>
 
 
-<a href="/thanks">Submit</a>
+<div class="contrib">
+  <div>
+    <h1>Instructions</h1>
+    <p>Blah blah blah....</p>
+  </div>
+
+
+  <div>
+    <form id="contib-info" ng-submit="art.add()">
+        <div class="form-group">
+          <label for="first name">First Name:</label>
+          <input ng-model="art.firstName" type="text" id="first name" name="first name" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="last name">Last Name:</label>
+          <input ng-model="art.lastName" type="text" id="last name" name="last name" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="word1">Word 1:</label>
+          <input ng-model="art.word1" type="text" id="word1" name="word1"  class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="draw1">Drawing 1:</label>
+          <input ng-model="art.draw1" type="text" id="draw1" name="draw1"  class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="word2">Word 2:</label>
+          <input ng-model="art.word2" type="text" id="word2" name="word2"  class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="draw2">Drawing 2:</label>
+          <input ng-model="art.draw2" type="text" id="draw2" name="draw2"  class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="word3">Word 3:</label>
+          <input ng-model="art.word3" type="text" id="word3" name="word3"  class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="draw3">Drawing 3:</label>
+          <input ng-model="art.draw3" type="text" id="draw3" name="draw3"  class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="word4">Word 4:</label>
+          <input ng-model="art.word4" type="text" id="word4" name="word4"  class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="draw4">Drawing 4:</label>
+          <input ng-model="art.draw4" type="text" id="draw4" name="draw4"  class="form-control"/>
+        </div>
+
+        <a href="/thanks" ng-click="art.submitArt()" type="button" class="btn btn-primary">Submit</a>
+      </form>
+
+  </div>
+</div>

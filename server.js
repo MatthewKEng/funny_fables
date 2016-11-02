@@ -34,7 +34,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/adminlog', login);
-
+app.use('/contrib', art)
 
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'public/views/index.html'));
@@ -43,9 +43,6 @@ app.get('/', function(req, res){
 // everything beyond this point must be authenticated
 app.use(ensureAuthenticated);
 
-app.get('/supersecret', function(req, res){
-  res.send('the password is banana');
-});
 
 app.get('/*', function(req, res){
   res.sendFile(path.join(__dirname, 'public/views/index.html'));

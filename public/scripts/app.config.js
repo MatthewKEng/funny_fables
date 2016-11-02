@@ -8,11 +8,13 @@ angular.module('phinApp').config(function($routeProvider, $locationProvider) {
          }).when('/story', {
            templateUrl: 'views/story.html'
          }).when('/contrib', {
-           templateUrl: 'views/contrib.html'
+           templateUrl: 'views/contrib.html',
+           controller: 'ArtController as ctrl'
          }).when('/thanks', {
            templateUrl: 'views/thanks.html'
          }).when('/adminlog', {
-           templateUrl: 'views/adminlog.html'
+           templateUrl: 'views/adminlog.html',
+           controller: 'LoginController as login'
          }).when('/approval', {
            templateUrl: 'views/approval.html'
          });
