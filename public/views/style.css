@@ -32,8 +32,23 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+
 }
 
 .frame {
   width: 100%;
+}
+
+.col img {
+  
+}
+
+
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

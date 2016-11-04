@@ -1,3 +1,80 @@
 <h1>Approval page!!!</h1>
 
-<a href="/" type="button" class="btn btn-primary">Back to Home</a>
+<body class="col">
+
+  <div>
+
+    <div class="contrib">
+
+      <div class="row">
+
+        <img ng-src="{{login.img1}}"/>
+
+        <p>Word 1: {{login.word1}}</p>
+
+      </div>
+
+      <div class="row">
+
+        <img ng-src="{{login.img2}}"/>
+
+        <p>Word 1: {{login.word2}}</p>
+
+      </div>
+
+    </div>
+
+    <div class="contrib">
+
+      <div class="row">
+
+        <img ng-src="{{login.img3}}"/>
+
+        <p>Word 1: {{login.word3}}</p>
+
+      </div>
+
+      <div class="row">
+
+        <img ng-src="{{login.img4}}"/>
+
+        <p>Word 1: {{login.word4}}</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<div class="contrib">
+<!-- be sure that both buttons clear field -->
+  <a ng-click="" href="/" type="button" class="btn btn-primary">Approve</a>
+  <a ng-click="" href="/" type="button" class="btn btn-primary">Don't Approve</a>
+</div>
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+
+<!-- create container for pending pages -->
+
+<!-- create approve/not approve buttons -->
+
+<!-- ng-click on buttons to update status in db -->
+
+  <!-- <ul>
+    <li ng-repeat="person in ctrl.people">
+      <p>{{person.name}}</p>
+    </li>
+  </ul> -->
+<div class="contrib">
+  <a ng-click="login.getPend()" type="button" class="btn btn-primary">View Pending Submissions</a>
+  <a href="/" type="button" class="btn btn-primary">Back to Home</a>
+</div>
+
+</body>

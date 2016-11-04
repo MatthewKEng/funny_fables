@@ -3,9 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const login = require('./routes/login');
+const art = require('./routes/art');
 const auth = require('./auth/setup');
 const passport = require('passport');
 const session = require('express-session');
+
 
 
 auth.setup();
@@ -32,9 +34,12 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/adminlog', login);
-app.use('/contrib', art)
+app.use('/art', art);
+
 
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'public/views/index.html'));

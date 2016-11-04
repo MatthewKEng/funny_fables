@@ -2,27 +2,32 @@ angular.module('phinApp')
        .controller('ArtController', ArtController);
 
 
-  function addArt($http, $location) {
-    console.log('RegisterController loaded');
+  function ArtController($http, $location) {
+    console.log('ArtController loaded');
     var ctrl = this;
+    var pend = "pending";
 
     ctrl.add = function() {
       console.log('adding new art');
       $http.post('/art', {
-        first_name: ctrl.firstName,
-        last_name: ctrl.lastName,
+        firstName: ctrl.firstName,
+        lastName: ctrl.lastName,
         word1: ctrl.word1,
-        img1: ctrl.draw1,
+        draw1: ctrl.draw1,
         word2: ctrl.word2,
-        img2: ctrl.draw2,
+        draw2: ctrl.draw2,
         word3: ctrl.word3,
-        img3: ctrl.draw3,
+        draw3: ctrl.draw3,
         word4: ctrl.word4,
-        img4: ctrl.draw4
-      }).then(function(){
+        draw4: ctrl.draw4,
+        pend: pend
+          }).then(function(){
         $location.path('/thanks');
+        //console.log('response=', response);
+        //add function to display the above info on approval.html upon submit, part of add function//
       }, function(error) {
         console.log('error registering', error);
-      });
+      })
+
     };
   }

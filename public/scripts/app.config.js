@@ -9,14 +9,15 @@ angular.module('phinApp').config(function($routeProvider, $locationProvider) {
            templateUrl: 'views/story.html'
          }).when('/contrib', {
            templateUrl: 'views/contrib.html',
-           controller: 'ArtController as ctrl'
+           controller: 'ArtController as art'
          }).when('/thanks', {
            templateUrl: 'views/thanks.html'
          }).when('/adminlog', {
            templateUrl: 'views/adminlog.html',
            controller: 'LoginController as login'
          }).when('/approval', {
-           templateUrl: 'views/approval.html'
+           templateUrl: 'views/approval.html',
+           controller: 'LoginController as login'
          });
 
          // lets us use normal looking links

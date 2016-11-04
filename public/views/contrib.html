@@ -9,7 +9,7 @@
 
 
   <div>
-    <form id="contib-info" ng-submit="art.add()">
+    <form id="contib-info">
         <div class="form-group">
           <label for="first name">First Name:</label>
           <input ng-model="art.firstName" type="text" id="first name" name="first name" class="form-control" />
@@ -60,7 +60,7 @@
           <input ng-model="art.draw4" type="text" id="draw4" name="draw4"  class="form-control"/>
         </div>
 
-        <a href="/thanks" ng-click="art.submitArt()" type="button" class="btn btn-primary">Submit</a>
+        <a href="/thanks" ng-click="art.add()" type="submit" class="btn btn-primary">Submit</a>
       </form>
 
   </div>
