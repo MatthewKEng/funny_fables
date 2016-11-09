@@ -5,8 +5,13 @@ angular.module('phinApp')
        function StoryController(storyService) {
          console.log('StoryController loaded');
          var ctrl = this;
-         ctrl.page1 = [];
-         
+         ctrl.page1 = storyService.page1;
+         ctrl.page2 = storyService.page2;
+         ctrl.page3 = storyService.page3;
+         ctrl.page4 = storyService.page4;
+
+         console.log('NOW THIS is ctrl.page1', ctrl.page1);
+
 
          ctrl.getStory = function() {
 
@@ -16,10 +21,16 @@ angular.module('phinApp')
                //console.log('response = ', response);
                function(response) {
                  console.log('StoryService response', response);
+                 console.log('THIS is storyService.page1', storyService.page1);
+                 //console.log('Yay! This is page1', page1);
+                //  ctrl.page1 = response.data[0];
+                //  ctrl.page2 = response.data[1];
+                //  ctrl.page3 = response.data[2];
+                //  ctrl.page4 = response.data[3];
 
-                 ctrl.page1 = response;
-                 console.log('ctrl.page1[0]=', ctrl.page1[0]);
-                 console.log('ctrl.page1[1]=', ctrl.page1[1]);
+                 //ctrl.page1 = response;
+                 //console.log('ctrl.page1[0]=', ctrl.page1[0]);
+                 //console.log('ctrl.page1[1]=', ctrl.page1[1]);
 
               //  ctrl.img1=response.data.img1;
               //  ctrl.word1=response.data.word1;
@@ -35,6 +46,10 @@ angular.module('phinApp')
            console.log('error making request', error);
          });
        };
-       //ctrl.getStory();
+       //console.log('This IS page1:', page1);
+       console.log('ctrl.page1 after funct:', ctrl.page1);
+       console.log('IMG', ctrl.page1[0]);
+
+
        console.log('bottom of story.controller.js');
      }

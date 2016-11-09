@@ -6,7 +6,7 @@ angular.module('phinApp').config(function($routeProvider, $locationProvider) {
            controller: 'StoryController as story'
          }).when('/home', {
            templateUrl: 'views/home.html',
-           //controller: 'StoryController as story'
+           controller: 'StoryController as story'
          }).when('/storystart', {
            templateUrl: 'views/storystart.html',
            controller: 'StoryController as story'
