@@ -1,7 +1,6 @@
 {
   "name": "solo_project",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,5 +21,15 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "pg": "^6.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthewKEng/funny_fables.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatthewKEng/funny_fables/issues"
+  },
+  "homepage": "https://github.com/MatthewKEng/funny_fables#readme",
+  "description": ""
 }

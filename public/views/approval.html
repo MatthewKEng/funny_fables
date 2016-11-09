@@ -2,23 +2,23 @@
 
 <body class="col">
 
-  <div>
+  <section ng-repeat="pend in login.response">
 
     <div class="contrib">
 
       <div class="row">
 
-        <img ng-src="{{login.img1}}"/>
+        <img ng-src="{{pend.img1}}"/>
 
-        <p>Word 1: {{login.word1}}</p>
+        <p>Word 1: {{pend.word1}}</p>
 
       </div>
 
       <div class="row">
 
-        <img ng-src="{{login.img2}}"/>
+        <img ng-src="{{pend.img2}}"/>
 
-        <p>Word 1: {{login.word2}}</p>
+        <p>Word 2: {{pend.word2}}</p>
 
       </div>
 
@@ -28,42 +28,35 @@
 
       <div class="row">
 
-        <img ng-src="{{login.img3}}"/>
+        <img ng-src="{{pend.img3}}"/>
 
-        <p>Word 1: {{login.word3}}</p>
+        <p>Word 3: {{pend.word3}}</p>
 
       </div>
 
       <div class="row">
 
-        <img ng-src="{{login.img4}}"/>
+        <img ng-src="{{pend.img4}}"/>
 
-        <p>Word 1: {{login.word4}}</p>
+        <p>Word 4: {{pend.word4}}</p>
 
       </div>
 
     </div>
 
-  </div>
+
 
 <div class="contrib">
 <!-- be sure that both buttons clear field -->
-  <a ng-click="" href="/" type="button" class="btn btn-primary">Approve</a>
-  <a ng-click="" href="/" type="button" class="btn btn-primary">Don't Approve</a>
+  <a ng-click="login.approvStuff($index)" type="button" class="btn btn-primary">Approve</a>
+  <a ng-click="login.notApprovStuff()" type="button" class="btn btn-primary">Don't Approve</a>
 </div>
 
-<div>
+</section>
 
-</div>
-
-<div>
-
-</div>
 
 
 <!-- create container for pending pages -->
-
-<!-- create approve/not approve buttons -->
 
 <!-- ng-click on buttons to update status in db -->
 

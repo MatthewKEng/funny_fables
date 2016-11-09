@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const login = require('./routes/login');
 const art = require('./routes/art');
+const story = require('./routes/story');
 const auth = require('./auth/setup');
 const passport = require('passport');
 const session = require('express-session');
@@ -39,6 +40,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/adminlog', login);
 app.use('/art', art);
+app.use('/story', story);
+
 
 
 app.get('/', function(req, res){

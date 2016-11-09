@@ -2,11 +2,29 @@ angular.module('phinApp').config(function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 
        $routeProvider.when('/', {
-           templateUrl: 'views/home.html'
+           templateUrl: 'views/home.html',
+           controller: 'StoryController as story'
          }).when('/home', {
-           templateUrl: 'views/home.html'
-         }).when('/story', {
-           templateUrl: 'views/story.html'
+           templateUrl: 'views/home.html',
+           //controller: 'StoryController as story'
+         }).when('/storystart', {
+           templateUrl: 'views/storystart.html',
+           controller: 'StoryController as story'
+         }).when('/story1', {
+           templateUrl: 'views/story1.html',
+           controller: 'StoryController as story'
+         }).when('/story2', {
+           templateUrl: 'views/story2.html',
+           controller: 'StoryController as story'
+         }).when('/story3', {
+           templateUrl: 'views/story3.html',
+           controller: 'StoryController as story'
+         }).when('/story4', {
+           templateUrl: 'views/story4.html',
+           controller: 'StoryController as story'
+         }).when('/storyend', {
+           templateUrl: 'views/storyend.html',
+           //controller: 'StoryController as art'
          }).when('/contrib', {
            templateUrl: 'views/contrib.html',
            controller: 'ArtController as art'

@@ -26,23 +26,43 @@ function LoginController($http, $location) {
 
       console.log('populating pending art');
 
-    $http.get('/art').then(function(response){
-      console.log('response', response.data.img1);
-      ctrl.word1 = response.data.word1;
-      ctrl.img1 = response.data.img1;
-      ctrl.word2 = response.data.word2;
-      ctrl.img2 = response.data.img2;
-      ctrl.word3 = response.data.word3;
-      ctrl.img3 = response.data.img3;
-      ctrl.word4 = response.data.word4;
-      ctrl.img4 = response.data.img4;
-
-      console.log('ctrl.word1 = ', ctrl.word1);
-      console.log('ctrl.img1 = ', ctrl.img1);
+        $http.get('/art').then(function(response){
+          console.log('response', response.data);
+          ctrl.response=response.data;
+          console.log('ctrl.pends = ', ctrl.response);
 
     }, function(error){
       console.log('error making request', error);
     });
   };
+
+  ctrl.approvStuff = function(index) {
+
+    console.log('index', ctrl.response[index]);
+
+      $http.put('/art', ctrl.response[index]).then(function(){
+          console.log('updated status in db');
+          
+
+  },
+   function(error){
+    console.log('error making request', error);
+  });
+  };
+
+//   ctrl.notApprovStuff = function() {
+//
+//     console.log('did not approve pending art');
+//
+//       $http.put('/art').then(function(response){
+//         console.log('response', response.data);
+//         ctrl.response=response.data;
+//         console.log('ctrl.pends = ', ctrl.response);
+//
+//   }, function(error){
+//     console.log('error making request', error);
+//   });
+// };
+
 
 }
