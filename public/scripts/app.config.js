@@ -35,7 +35,7 @@ angular.module('phinApp').config(function($routeProvider, $locationProvider) {
            controller: 'LoginController as login'
          }).when('/approval', {
            templateUrl: 'views/approval.html',
-           controller: 'LoginController as login'
+           controller: 'ApproveController as approve'
          });
 
          // lets us use normal looking links
