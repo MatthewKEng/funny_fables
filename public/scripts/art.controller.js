@@ -7,8 +7,18 @@ angular.module('phinApp')
     var ctrl = this;
     var pend = "pending";
 
-    ctrl.add = function() {
+
+
+    ctrl.add = function(form) {
       console.log('adding new art');
+
+      ctrl.submitted=true;
+        if (form.$invalid) {
+          console.log('invalid form');
+          return;
+        }
+        console.log('valid form');
+
       $http.post('/art', {
         firstName: ctrl.firstName,
         lastName: ctrl.lastName,
