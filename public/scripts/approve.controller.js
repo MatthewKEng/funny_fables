@@ -29,10 +29,10 @@ function ApproveController($http, $location) {
 
         $http.put('/approved', ctrl.response[index]).then(function(){
           console.log('updated status in db');
-        },
-        function(error){
-        console.log('error making request', error);
+        },  function(error){
+          console.log('error making request', error);
         });
+        ctrl.getPend();
         ctrl.getPend();
     };
 
@@ -40,18 +40,17 @@ function ApproveController($http, $location) {
 
 
 
-    ctrl.notApprovStuff = function() {
+    ctrl.notApprovStuff = function(index) {
 
       console.log('did not approve pending art');
+
       $http.put('/notApproved', ctrl.response[index]).then(function(){
           console.log('updated status in db');
-
-
-
-    }, function(error){
-      console.log('error making request', error);
-    });
-    ctrl.getPend();
-  };
+            }, function(error){
+              console.log('error making request', error);
+            });
+              ctrl.getPend();
+              ctrl.getPend();
+          };
 
 }

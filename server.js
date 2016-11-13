@@ -6,6 +6,7 @@ const login = require('./routes/login');
 const art = require('./routes/art');
 const story = require('./routes/story');
 const approved = require('./routes/approved');
+const notApproved = require('./routes/notApproved');
 const auth = require('./auth/setup');
 const passport = require('passport');
 const session = require('express-session');
@@ -42,7 +43,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use('/adminlog', login);
 app.use('/art', art);
 app.use('/story', story);
-app.use('/approved', approved )
+app.use('/approved', approved );
+app.use('/notApproved', notApproved );
 
 
 app.get('/', function(req, res){

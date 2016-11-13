@@ -9,15 +9,23 @@ body {
   margin: 15px auto 15px auto;
 }
 
+.col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 47.5%;
+  margin: 15px auto 15px auto;
+}
+
 .title {
-  font-family: Skater Girls Rock;
+  font-family: Carton Six;
   font-size: 75px;
   text-align: center;
   margin: 15px auto 15px auto;
 }
 
 .marquee {
-  font-family: Skater Girls Rock;
+  font-family: Carton Six;
   font-size: 45px;
   text-align: center;
   margin: 15px auto 15px auto;
@@ -44,6 +52,15 @@ h1 {
   margin: 15px auto 15px auto;
 }
 
+.contrib2 {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 47.5%;
+  align-items: center;
+  justify-content: space-around;;
+  margin: 15px auto 15px auto;
+}
+
 .frame {
   width: 100%;
 }
@@ -55,4 +72,8 @@ h1 {
   align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.row img {
+  width: 47.5%;
 }

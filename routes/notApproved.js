@@ -25,7 +25,7 @@ router.put('/', function(req, res){
                 return;
             }
             console.log('req.body.index', req.body.id);
-            console.log('updated status');
+            console.log('updated status to not approved');
           //res.send(result.rows);
         });
     });
