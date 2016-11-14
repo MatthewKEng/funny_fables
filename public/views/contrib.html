@@ -1,23 +1,29 @@
 
 
     <div class="contrib">
-      <div class="col2" style="font-family:Carton Six;">
-        <h1 style="font-size:45px; margin-bottom:25px">How to add your own art and story!!!</h1>
-        <p style="font-size:25px;">So, you want to draw your own version of this story, huh? GREAT!!! I can't WAIT to see it!</p>
+      <div class="col2">
+        <h1 style="font-family:Carton Six; font-size:45px; margin-bottom:25px">How to add your own art and story!!!</h1>
+        <p style="font-size:25px; text-align:justify;">So, you want to draw your own version of this story, huh? GREAT!!! I can't WAIT to see it! To start off, read the four sentences below and choose your own words to fill in the blanks. Then go ahead and draw a picture for each sentence that shows what is happening in that sentence. Lastly, have a parent or older sister or brother take a picture or scan in each drawing and post them on a Facebook page. Lastly, fill out the form to the right, being sure to include all four words you chose, along with the link for each drawing (right click on the image on it's Facebook page and choose "copy image address", then paste that address in the appropriate field on the form). Have fun with it, and thanks for adding to the Funny Fables!</p>
+        <ul style="font-size:20px;">
+          <li>Page 1: "It all started one day, when I took my dog and my ________ out for a walk."</li>
+          <li>Page 2: "Suddenly, a giant ________ fell out of the sky!"</li>
+          <li>Page 3: "Luckily, a brave ________ saved the day..."</li>
+          <li>Page 4: "...and my dog and I sat down to eat a giant ________ to celebrate!"</li>
+        </ul>
       </div>
 
-      <div class="col2" ng-init"phinform=true">
+      <div class="col3" ng-init"phinform=true">
         <form name="contribForm" novalidate role="form" ng-model="phinform">
 
           <div>
-            <h1 style="font-family:Carton Six;">Contribution Form</h1>
+            <h1 style="font-family:Carton Six; font-size:45px;">Contribution Form</h1>
           </div>
           <div id="messages" class="alert alert-success" ng-show="messages" ng-bind="messages"></div>
           <div class="contrib">
             <div class="col">
               <div class="form-group">
                 <label for="firstName">First Name:</label>
-                
+
                 <input ng-model="art.firstName" type="text" id="firstName" name="firstName" class="form-control"/>
               </div>
 
