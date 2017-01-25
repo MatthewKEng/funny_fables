@@ -8,7 +8,6 @@ angular.module('phinApp')
     var pend = "pending";
 
 
-
     ctrl.add = function(form) {
       console.log('adding new art');
 
@@ -33,17 +32,11 @@ angular.module('phinApp')
         pend: pend
           }).then(function(){
         $location.path('/thanks');
-        //console.log('response=', response);
-        //add function to display the above info on approval.html upon submit, part of add function//
+
       }, function(error) {
         console.log('error registering', error);
       })
 
     };
-
-
-
-
-
 
   }

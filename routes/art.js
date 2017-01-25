@@ -57,11 +57,6 @@ router.get('/', function(req, res){
         });
 
 
-
-
-
-
-
 router.post('/', function(req, res){
     pool.connect(function(err, client, done){
         if (err){
@@ -79,8 +74,6 @@ router.post('/', function(req, res){
             }
           console.log('result.rows=', result.rows);
           res.send(result.rows);
-
-          //res.sendStatus(200);
 
         });
     });

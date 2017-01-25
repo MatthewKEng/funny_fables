@@ -13,14 +13,10 @@ function ApproveController($http, $location) {
         console.log('response', response.data);
         ctrl.response=response.data;
         console.log('ctrl.pends = ', ctrl.response);
-
-
-      }, function(error){
+          }, function(error){
         console.log('error making request', error);
       });
     };
-
-
 
 
   ctrl.approvStuff = function(index) {
@@ -35,9 +31,6 @@ function ApproveController($http, $location) {
         ctrl.getPend();
         ctrl.getPend();
     };
-
-
-
 
 
     ctrl.notApprovStuff = function(index) {

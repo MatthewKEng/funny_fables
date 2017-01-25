@@ -26,17 +26,8 @@ router.put('/', function(req, res){
             }
             console.log('req.body.index', req.body.id);
             console.log('updated status to not approved');
-          //res.send(result.rows);
         });
     });
     });
-
-
-
-
-
-
-
-
 
 module.exports = router;

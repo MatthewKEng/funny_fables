@@ -9,7 +9,7 @@ angular.module('phinApp')
          ctrl.page2 = [];
          ctrl.page3 = [];
          ctrl.page4 = [];
-         //page1 = story[0];
+
 
           ctrl.getStory = function() {
 
@@ -25,10 +25,8 @@ angular.module('phinApp')
                 ctrl.page4 = response.data[3];
 
                 console.log('THIS is ctrl.page1...', ctrl.page1);
-                //console.log('page1 = ', page1);
-                return response;
 
-                //ctrl.story = response.data
+                return response;
 
           }, function(error){
             console.log('error making request', error);

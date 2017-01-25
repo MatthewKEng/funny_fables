@@ -21,6 +21,5 @@ function LoginController($http, $location) {
     });
 
   };
-
     
 }
