@@ -1,7 +1,7 @@
 const pg = require('pg');
 
 var config = {
-  database: 'solo',
+  
   // user: Meng,
   user: 'oyhrtdssihsime',
   database: 'd5s56frcplpjbg',
