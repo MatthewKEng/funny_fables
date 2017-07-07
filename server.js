@@ -10,7 +10,9 @@ const notApproved = require('./routes/notApproved');
 const auth = require('./auth/setup');
 const passport = require('passport');
 const session = require('express-session');
+const dotenv = require('dotenv');
 
+dotenv.load();
 
 
 auth.setup();
@@ -67,6 +69,11 @@ function ensureAuthenticated(req, res, next) {
   }
 }
 
-var server = app.listen(3000, function() {
+var server = app.listen(process.env.PORT || 3000, function() {
   console.log('Listening on port', server.address().port);
 });
+
+// app.set(‘port’, (process.env.PORT || 3000));
+// app.listen(app.get(‘port’), function () {
+//    console.log(‘app running on port’, app.get(‘port’));
+//  });
